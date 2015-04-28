@@ -1,0 +1,33 @@
+[Bookmarks]
+C:\Art\
+C:\Art\Reference\
+C:\Art\Biomecha Game\
+C:\Art\MatCap\
+C:\Art\Part and Modules\
+C:\Art\Knight\
+C:\Art\Darkout\
+C:\Dropbox\
+C:\Art\Resources\
+C:\Users\Ja\Dysk Google\
+C:\Art\Biomecha Game\Environments\EnvConstructionElements\
+C:\Art\Biomecha Game\Godot\
+C:\Users\Ja\Dysk Google\Blender Plugins\
+C:\Users\Ja\Dysk Google\Blender Scripting\
+C:\Users\Ja\Dysk Google\Blender Settings\
+C:\Windows\Fonts\
+C:\Art\Ebee3d\
+C:\Dropbox\02 - Ebee 3D - Agence Virtuelle\03_art\04_datasbank\
+C:\Art\Ebee3d\Repository\ebbe3d\Assets\Meshes\
+C:\Art\Ebee3d\Repository\ebbe3d\Assets\Textures\
+C:\Art\My Basemeshes\
+[Recent]
+C:\Users\oem\Dysk Google\Blender Scripting\
+C:\Users\oem\Dysk Google\Blender Scripting\sticky-keys-testbuild-blender-2.73-win64\
+C:\Users\Ja\Dysk Google\Blender Scripting\rRMB\
+C:\Users\Ja\Documents\
+C:\Users\Ja\Dysk Google\Blender Scripting\rSelection\
+C:\Art\GitHub\blender-presets\keyconfig\
+C:\Users\Ja\Dysk Google\Blender Scripting\sticky-keys-testbuild-blender-2.73-win64\
+C:\Users\Ja\Desktop\sticky-keys-testbuild-blender-2.73-win64\
+C:\Art\Blender UI\Keymaps\
+C:\Art\Biomecha Game\Monster\Render\
