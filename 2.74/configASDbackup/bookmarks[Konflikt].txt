@@ -1,0 +1,33 @@
+[Bookmarks]
+C:\Art\
+C:\Art\Reference\
+C:\Art\Biomecha Game\
+C:\Art\MatCap\
+C:\Art\Part and Modules\
+C:\Art\Knight\
+C:\Art\Darkout\
+C:\Dropbox\
+C:\Art\Resources\
+C:\Users\Ja\Dysk Google\
+C:\Art\Biomecha Game\Environments\EnvConstructionElements\
+C:\Art\Biomecha Game\Godot\
+C:\Users\Ja\Dysk Google\Blender Plugins\
+C:\Users\Ja\Dysk Google\Blender Scripting\
+C:\Users\Ja\Dysk Google\Blender Settings\
+C:\Windows\Fonts\
+C:\Dropbox\02 - Ebee 3D - Agence Virtuelle\03_art\04_datasbank\
+C:\Art\Ebee3d\Repository\ebbe3d\Assets\Meshes\
+C:\Art\Ebee3d\Repository\ebbe3d\Assets\Textures\
+C:\Art\My Basemeshes\
+C:\Art\Ebee3d\
+[Recent]
+C:\Users\oem\Desktop\
+D:\
+C:\Users\Ja\Desktop\
+C:\Users\Ja\Desktop\PBR_SHADERS_PACK\PBR_SHADERS_PACK\
+C:\Art\Biomecha Game\
+C:\Art\Biomecha Game\Trees\
+C:\Art\Ebee3d\Repository\ebbe3d\Assets\Meshes\Rooms\
+C:\Art\Ebee3d\
+C:\Users\oem\Dysk Google\Art\Warsztaty Komputerowe 3d\2014-2015\
+C:\Users\oem\Dysk Google\Art\Tree\
