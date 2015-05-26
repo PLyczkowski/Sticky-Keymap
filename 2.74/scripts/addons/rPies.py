@@ -709,8 +709,6 @@ class RAllSelectModes(bpy.types.Operator):
         r_all_select_modes(context)
         return {'FINISHED'}
 
-
-
 # Keymaps
 
 addon_keymaps = []
