@@ -1701,7 +1701,7 @@ def register():
         addon_keymaps.append((km, kmi))
 
         # Set Cursor
-        kmi = km.keymap_items.new('view3d.cursor3d', 'RIGHTMOUSE', 'PRESS', alt=True)
+        kmi = km.keymap_items.new('view3d.cursor3d', 'MIDDLEMOUSE', 'CLICK')
         addon_keymaps.append((km, kmi))
 
         # Node Editor
