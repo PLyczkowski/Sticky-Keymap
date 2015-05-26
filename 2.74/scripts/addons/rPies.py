@@ -648,6 +648,26 @@ class VIEW3D_PIE_extrude(Menu):
         pie.operator("view3d.edit_mesh_extrude_move_shrink_fatten", text="Extrude Along Normals")
         pie.operator("view3d.edit_mesh_extrude_individual_move", text="Extrude Individual")
 
+### OPERATORS
+
+def r_all_select_modes(context):
+    bpy.ops.mesh.select_mode(use_extend=True, use_expand=False, type='VERT', action='ENABLE')
+    bpy.ops.mesh.select_mode(use_extend=True, use_expand=False, type='EDGE', action='ENABLE')
+    bpy.ops.mesh.select_mode(use_extend=True, use_expand=False, type='FACE', action='ENABLE')
+
+class RAllSelectModes(bpy.types.Operator):
+    """Tooltip"""
+    bl_idname = "mesh.r_all_select_modes"
+    bl_label = "All Select Modes"
+
+    @classmethod
+    def poll(cls, context):
+        return context.active_object is not None
+
+    def execute(self, context):
+        r_all_select_modes(context)
+        return {'FINISHED'}
+
 
 
 # Keymaps
@@ -668,24 +688,24 @@ def register():
         km = wm.keyconfigs.addon.keymaps.new(name='Object Non-modal')
         kmi = km.keymap_items.new('wm.call_menu_pie', 'TAB', 'HOLD')
         kmi.properties.name = 'VIEW3D_PIE_object_mode'
-        kmi = km.keymap_items.new('wm.call_menu_pie', 'D', 'HOLD')
+        kmi = km.keymap_items.new('wm.call_menu_pie', 'W', 'HOLD')
         kmi.properties.name = 'VIEW3D_PIE_move'
-        kmi = km.keymap_items.new('wm.call_menu_pie', 'S', 'HOLD')
+        kmi = km.keymap_items.new('wm.call_menu_pie', 'R', 'HOLD')
         kmi.properties.name = 'VIEW3D_PIE_scale'
-        kmi = km.keymap_items.new('wm.call_menu_pie', 'A', 'HOLD')
+        kmi = km.keymap_items.new('wm.call_menu_pie', 'E', 'HOLD')
         kmi.properties.name = 'VIEW3D_PIE_rotate'
 
         # Edit Mode
 
-        kmi = km.keymap_items.new('wm.call_menu_pie', 'W', 'HOLD')
-        kmi.properties.name = 'VIEW3D_PIE_special_menu'
-        kmi = km.keymap_items.new('wm.call_menu_pie', 'R', 'HOLD')
+        # kmi = km.keymap_items.new('wm.call_menu_pie', 'W', 'HOLD')
+        # kmi.properties.name = 'VIEW3D_PIE_special_menu'
+        kmi = km.keymap_items.new('wm.call_menu_pie', 'D', 'HOLD')
         kmi.properties.name = 'VIEW3D_PIE_deform'
         kmi = km.keymap_items.new('wm.call_menu_pie', 'C', 'HOLD')
         kmi.properties.name = 'VIEW3D_PIE_cut'
         kmi = km.keymap_items.new('wm.call_menu_pie', 'F', 'HOLD')
         kmi.properties.name = 'VIEW3D_PIE_make'
-        kmi = km.keymap_items.new('wm.call_menu_pie', 'E', 'HOLD')
+        kmi = km.keymap_items.new('wm.call_menu_pie', 'A', 'HOLD')
         kmi.properties.name = 'VIEW3D_PIE_extrude'
 
         kmi = km.keymap_items.new('wm.call_menu_pie', 'ONE', 'HOLD')
@@ -694,6 +714,8 @@ def register():
         kmi.properties.name = 'VIEW3D_PIE_edges'
         kmi = km.keymap_items.new('wm.call_menu_pie', 'THREE', 'HOLD')
         kmi.properties.name = 'VIEW3D_PIE_faces'
+
+        kmi = km.keymap_items.new('mesh.r_all_select_modes', 'FOUR', 'CLICK')
 
         #Shading
         km = wm.keyconfigs.addon.keymaps.new(name = '3D View Generic', space_type = 'VIEW_3D')
