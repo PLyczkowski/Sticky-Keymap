@@ -648,6 +648,47 @@ class VIEW3D_PIE_extrude(Menu):
         pie.operator("view3d.edit_mesh_extrude_move_shrink_fatten", text="Extrude Along Normals")
         pie.operator("view3d.edit_mesh_extrude_individual_move", text="Extrude Individual")
 
+# Snap
+
+class VIEW3D_PIE_snap(Menu):
+    bl_label = "Snapping"
+
+    def draw(self, context):
+        layout = self.layout
+
+        toolsettings = context.tool_settings
+        pie = layout.menu_pie()
+        pie.prop(toolsettings, "snap_element", expand=True)
+        pie.prop(toolsettings, "use_snap")
+
+# 3d Cursor
+
+class VIEW3D_PIE_cursor(Menu):
+    bl_label = "Cursor"
+
+    def draw(self, context):
+        layout = self.layout
+
+        toolsettings = context.tool_settings
+        pie = layout.menu_pie()
+
+        # Left
+
+        pie.operator("view3d.snap_cursor_to_grid", text="Snap Cursor To Grid")
+
+        # Right
+
+        pie.operator("view3d.snap_cursor_to_active", text="Snap Cursor To Active")
+
+        # Bottom
+
+        pie.operator("view3d.snap_cursor_to_center", text="Snap Cursor To Center")
+
+        # Top
+
+        pie.operator("view3d.snap_cursor_to_selected", text="Snap Cursor To Selected")
+        # pie.prop(toolsettings, "use_snap")
+
 ### OPERATORS
 
 def r_all_select_modes(context):
@@ -667,8 +708,6 @@ class RAllSelectModes(bpy.types.Operator):
     def execute(self, context):
         r_all_select_modes(context)
         return {'FINISHED'}
-
-
 
 # Keymaps
 
@@ -694,6 +733,13 @@ def register():
         kmi.properties.name = 'VIEW3D_PIE_scale'
         kmi = km.keymap_items.new('wm.call_menu_pie', 'E', 'HOLD')
         kmi.properties.name = 'VIEW3D_PIE_rotate'
+
+        #All
+
+        kmi = km.keymap_items.new('wm.call_menu_pie', 'MIDDLEMOUSE', 'HOLD')
+        kmi.properties.name = 'VIEW3D_PIE_cursor'
+        kmi = km.keymap_items.new('wm.call_menu_pie', 'S', 'HOLD')
+        kmi.properties.name = 'VIEW3D_PIE_snap'
 
         # Edit Mode
 
